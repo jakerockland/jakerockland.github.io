@@ -6,13 +6,13 @@
 
  @font-face {
      font-family: 'Quicksand';
- 	font-weight: 300;
+ 	 font-weight: 300;
      src: url(../fonts/Quicksand_Book.otf);
  }
 
  @font-face {
      font-family: 'Quicksand';
- 	font-weight: 200;
+ 	 font-weight: 200;
      src: url(../fonts/Quicksand_Light.otf);
  }
 
@@ -29,12 +29,7 @@ html {
     height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
     margin: 0 0 35px;
     font-family: 'Quicksand';
     font-weight: 550;
@@ -117,7 +112,7 @@ ul.social-buttons-jake li a:active {
     background-color: #79A5E0;
 }
 
-.intro {
+.main {
     display: table;
     width: 100%;
     height: auto;
@@ -131,30 +126,30 @@ ul.social-buttons-jake li a:active {
     -o-background-size: cover;
 }
 
-.intro .intro-body {
+.main .main-body {
     display: table-cell;
     vertical-align: middle;
 }
 
-.intro .intro-body .brand-heading {
+.main .main-body .brand-heading {
     font-size: 70px;
 }
 
-.intro .intro-body .intro-text {
+.main .main-body .main-text {
     font-size: 18px;
 }
 
 @media(min-width:768px) {
-    .intro {
+    .main {
         height: 100%;
         padding: 0;
     }
 
-    .intro .intro-body .brand-heading {
+    .main .main-body .brand-heading {
         font-size: 60px;
     }
 
-    .intro .intro-body .intro-text {
+    .main .main-body .main-text {
         font-size: 26px;
     }
 }
