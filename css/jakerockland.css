@@ -112,7 +112,7 @@ ul.social-buttons-jake li a:active {
     background-color: #79A5E0;
 }
 
-.main {
+.intro {
     display: table;
     width: 100%;
     height: auto;
@@ -126,30 +126,30 @@ ul.social-buttons-jake li a:active {
     -o-background-size: cover;
 }
 
-.main .main-body {
+.intro .intro-body {
     display: table-cell;
     vertical-align: middle;
 }
 
-.main .main-body .brand-heading {
+.intro .intro-body .brand-heading {
     font-size: 70px;
 }
 
-.main .main-body .main-text {
+.intro .intro-body .intro-text {
     font-size: 18px;
 }
 
 @media(min-width:768px) {
-    .main {
+    .intro {
         height: 100%;
         padding: 0;
     }
 
-    .main .main-body .brand-heading {
+    .intro .intro-body .brand-heading {
         font-size: 60px;
     }
 
-    .main .main-body .main-text {
+    .intro .intro-body .intro-text {
         font-size: 26px;
     }
 }
