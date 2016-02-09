@@ -307,22 +307,22 @@ body {
 }
 
 .tooltip-inner {
-    background-color: #D2BBA0;
+    background-color: #910000;
     color: #fff;
 }
 
 .tooltip.top .tooltip-arrow {
-    border-top-color: #D2BBA0;
+    border-top-color: #910000;
 }
 
 .tooltip.right .tooltip-arrow {
-    border-right-color: #D2BBA0;
+    border-right-color: #910000;
 }
 
 .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: #D2BBA0;
+    border-bottom-color: #910000;
 }
 
 .tooltip.left .tooltip-arrow {
-    border-left-color: #D2BBA0;
+    border-left-color: #910000;
 }
