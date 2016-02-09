@@ -129,6 +129,7 @@ ul.social-buttons-jake li a:active {
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
+    padding-top: 3%;
 }
 
 .intro .intro-body .brand-heading {
