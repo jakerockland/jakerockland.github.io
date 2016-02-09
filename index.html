@@ -58,15 +58,17 @@
                 </p>
                 <div class="me">
                     <ul class="list-inline social-buttons social-buttons-jake">
-                        <li><a target="_blank" href="https://www.facebook.com/jakeinthesun"><i class="fa fa-facebook"></i></a>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="Facebook" target="_blank" href="https://www.facebook.com/jakeinthesun"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a target="_blank" href="http://www.linkedin.com/in/jakerockland/en"><i class="fa fa-linkedin"></i></a>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="LinkedIn" target="_blank" href="http://www.linkedin.com/in/jakerockland/en"><i class="fa fa-linkedin"></i></a>
                         </li>
-                        <li><a target="_blank" href="https://github.com/jakerockland"><i class="fa fa-github-alt"></i></a>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="Github" target="_blank" href="https://github.com/jakerockland"><i class="fa fa-github-alt"></i></a>
                         </li>
-                        <li><a target="_blank" href="https://soundcloud.com/jakerockland"><i class="fa fa-soundcloud"></i></a>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="Soundcloud" target="_blank" href="https://soundcloud.com/jakerockland"><i class="fa fa-soundcloud"></i></a>
                         </li>
-                        <li><a href="mailto:jake@korkapp.com"><i class="fa fa-envelope-o"></i></a>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="Resume" href="./resume.pdf"><i class="fa fa-file-pdf-o"></i></a>
+                        </li>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="Email" href="mailto:jake@korkapp.com"><i class="fa fa-envelope-o"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -86,6 +88,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Enable Tooltips -->
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>

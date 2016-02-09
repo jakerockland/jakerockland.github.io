@@ -305,3 +305,24 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+.tooltip-inner {
+    background-color: #D2BBA0;
+    color: #fff;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #D2BBA0;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #D2BBA0;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #D2BBA0;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #D2BBA0;
+}
