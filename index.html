@@ -19,8 +19,6 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +38,7 @@
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-64685728-1', 'auto');
         ga('send', 'pageview');
@@ -71,7 +69,8 @@
                                     <div class="modal-body">
                                         <p>I am a 21 year old undergraduate student studying some combination of electrical &amp; computer engineering, computer science, mathematics, and economics</p>
                                         <br>
-                                        <p>a <a target="_blank" href="https://github.com/jakerockland">developer</a>, <a target="_blank" href="http://korkapp.com">entrepreneur</a>, and <a target="_blank" href="http://blog.jakerockland.com">explorer</a>, I am interested in the intersection of software, business, and product development</p>
+                                        <p>a <a target="_blank" href="https://github.com/jakerockland">developer</a>, <a target="_blank" href="http://korkapp.com">entrepreneur</a>, and <a target="_blank" href="http://blog.jakerockland.com">explorer</a>,
+                                            I am interested in the intersection of software, business, and product development</p>
                                         <br>
                                         <p>more importantly, I love photography, writing haiku poetry, traveling to new places, and meeting people who challenge me see the world through new perspectives</p>
                                     </div>
@@ -118,7 +117,7 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -127,11 +126,11 @@
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="tooltip"]').click(function() {
+                $(this).tooltip('close');
+            })
         });
     </script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
 
 </body>
 
