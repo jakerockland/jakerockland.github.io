@@ -29,16 +29,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	  ga('create', 'UA-64685728-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+        ga('create', 'UA-64685728-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </head>
 
@@ -49,13 +55,35 @@
             <div class="col-md-8 col-md-offset-2">
                 <h1 class="brand-heading">jake rockland</h1>
                 <div class="me">
-                    <img class="img-responsive img-circle" src="img/jake.png" alt="Jake Rockland">
+                    <!-- Profile Image -->
+                    <span data-toggle="modal" data-target="#aboutMe">
+                        <img class="img-responsive img-circle" data-toggle="tooltip" data-placement="bottom" title="About Me" src="img/jake.png" alt="Jake Rockland">
+                    </span>
+                    <!-- About Me Modal -->
+                    <div id="aboutMe" class="modal fade" role="dialog">
+                        <div class="vertical-alignment-helper">
+                            <div class="modal-dialog vertical-align-center">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">about me</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>I am a 21 year old undergraduate student studying some combination of electrical &amp; computer engineering, computer science, mathematics, and economics</p>
+                                        <br>
+                                        <p>a <a target="_blank" href="https://github.com/jakerockland">developer</a>, <a target="_blank" href="http://korkapp.com">entrepreneur</a>, and <a target="_blank" href="http://blog.jakerockland.com">explorer</a>, I am interested in the intersection of software, business, and product development</p>
+                                        <br>
+                                        <p>more importantly, I love photography, writing haiku poetry, traveling to new places, and meeting people who challenge me see the world through new perspectives</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default center-block" data-dismiss="modal">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- <p class="intro-text">
-                    <a target="_blank" href="https://github.com/jakerockland">developer</a> |
-               	    <a target="_blank" href="http://korkapp.com">entrepreneur</a> |
-                    <a target="_blank" href="http://blog.jakerockland.com">explorer</a>
-                </p> -->
+
                 <div class="me">
                     <ul class="list-inline social-buttons social-buttons-jake">
                         <li><a data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" href="https://www.facebook.com/jakeinthesun"><i class="fa fa-facebook"></i></a>
@@ -66,7 +94,8 @@
                         </li>
                         <li><a data-toggle="tooltip" data-placement="top" title="Github" target="_blank" href="https://github.com/jakerockland"><i class="fa fa-github-alt"></i></a>
                         </li>
-                        <br><br>
+                        <br>
+                        <br>
                         <li><a data-toggle="tooltip" data-placement="bottom" title="Blog" target="_blank" href="http://blog.jakerockland.com"><i class="fa fa-camera-retro"></i></a>
                         </li>
                         <li><a data-toggle="tooltip" data-placement="bottom" title="Soundcloud" target="_blank" href="https://soundcloud.com/jakerockland"><i class="fa fa-soundcloud"></i></a>
@@ -96,9 +125,9 @@
 
     <!-- Enable Tooltips -->
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 
     <!-- Plugin JavaScript -->
