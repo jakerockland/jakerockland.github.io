@@ -180,6 +180,10 @@ ul.social-buttons-jake li a:active {
     font-size: 70px;
 }
 
+.brand-heading:hover {
+    color: #910000;
+}
+
 .intro .intro-body .intro-text {
     font-size: 18px;
 }
