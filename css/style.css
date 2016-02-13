@@ -182,6 +182,7 @@ ul.social-buttons-jake li a:active {
 
 .brand-heading:hover {
     color: #910000;
+    cursor: pointer;
 }
 
 .intro .intro-body .intro-text {
@@ -349,6 +350,10 @@ img::selection {
 
 img::-moz-selection {
     background: 0 0;
+}
+
+img:hover {
+    cursor: pointer;
 }
 
 body {
