@@ -3,7 +3,9 @@ Personal website for me, Jake Rockland.
 
 Demoing @ Hack London!
 
-Also matt was here
+Also @mbell_gb was here
+
+and varunkm
 
 ALSO BLOOMBERG WAS HERE!
 
