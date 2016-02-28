@@ -5,7 +5,7 @@ Demoing @ Hack London!
 
 Also @mbell_gb was here
 
-and varunkm
+and @varunkm and @jakerockland
 
 ALSO BLOOMBERG WAS HERE!
 
