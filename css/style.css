@@ -85,7 +85,6 @@ a:focus {
 .modal p {
     text-align: center;
     font-family: 'Quicksand';
-    font-weight: 200;
     font-style: normal;
     font-size: 11pt;
     src: url(../fonts/Quicksand_Light.otf);
