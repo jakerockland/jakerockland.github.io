@@ -36,11 +36,6 @@ p {
     line-height: 1.5;
 }
 
-.things>hr {
-    width: 60%;
-}
-
-
 hr {
     width: 30%;
 }
@@ -64,6 +59,24 @@ a:hover,
 a:focus {
     text-decoration: none;
     color: #D2BBA0;
+}
+
+.bounce {
+  -moz-animation: bounce 3s ease 1s;
+  -webkit-animation: bounce 3s ease 1s;
+  animation: bounce 3s ease 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .light {
@@ -204,6 +217,11 @@ ul.social-buttons-jake li a:active {
         padding: 0;
     }
 
+    #things {
+        height: 85%;
+        padding: 0;
+    }
+
     .intro .intro-body .brand-heading {
         font-size: 60px;
     }
@@ -213,7 +231,7 @@ ul.social-buttons-jake li a:active {
     }
 }
 
-.things-list {
+#things {
     color: black;
     background-color: white;
     width: 100%;
