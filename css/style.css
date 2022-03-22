@@ -24,7 +24,14 @@ html {
 }
 
 h1 {
-    margin: 0 0 35px;
+    margin: 0 0 35px 0;
+    font-family: 'Quicksand';
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+h2 {
+    margin: 35px 0 35px 0;
     font-family: 'Quicksand';
     font-weight: 550;
     letter-spacing: 1px;
@@ -218,7 +225,6 @@ ul.social-buttons-jake li a:active {
     }
 
     #things {
-        height: 85%;
         padding: 0;
     }
 
