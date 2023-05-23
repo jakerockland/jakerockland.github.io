@@ -245,6 +245,12 @@ ul.social-buttons-jake li a:active {
     padding-bottom: 100px;
 }
 
+.color-block {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+}
+
 .btn-circle {
     width: 70px;
     height: 70px;
