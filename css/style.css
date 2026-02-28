@@ -30,6 +30,10 @@ main.centered .bio {
     text-align: left;
 }
 
+.bio {
+    margin-bottom: 0.5rem;
+}
+
 .ascii-art {
     font-size: 0.7rem;
     line-height: 1.15;
