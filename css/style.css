@@ -6,37 +6,59 @@
 
 body {
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace;
-    color: #1a1a1a;
-    background: #fafafa;
+    color: #111;
+    background: #fff;
     line-height: 1.6;
     font-size: 16px;
+    -webkit-text-size-adjust: 100%;
 }
 
 main {
-    max-width: 700px;
+    max-width: 560px;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
+}
+
+main.centered {
+    text-align: center;
+}
+
+main.centered .ascii-art,
+main.centered ul {
+    display: inline-block;
+    text-align: left;
 }
 
 .ascii-art {
-    font-size: 0.8rem;
-    line-height: 1.2;
+    font-size: 0.7rem;
+    line-height: 1.15;
     overflow-x: auto;
+    white-space: pre;
+}
+
+@media (max-width: 480px) {
+    .ascii-art {
+        font-size: 0.5rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
 }
 
 .tagline {
-    margin-top: 0.5rem;
-    color: #555;
+    margin-top: 0.75rem;
+    color: #666;
 }
 
 hr {
     border: none;
     border-top: 1px solid #ddd;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -44,13 +66,13 @@ h1 {
 h2 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 h3 {
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 p {
@@ -71,19 +93,19 @@ ul li::before {
 }
 
 ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 a {
-    color: #4a6fa5;
+    color: #1a5276;
 }
 
 a:hover {
-    color: #1a1a1a;
+    color: #111;
 }
 
 .links {
-    color: #555;
+    color: #666;
 }
 
 img {
@@ -105,6 +127,12 @@ img {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     margin: 1rem 0;
+}
+
+@media (max-width: 480px) {
+    .image-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .image-grid img,
