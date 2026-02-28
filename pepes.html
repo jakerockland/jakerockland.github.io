@@ -3,61 +3,153 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="pepe prints — curated composite prints by jake rockland">
-    <title>pepe prints — jake rockland</title>
+    <meta name="description" content="stippled pepes — hand-stippled rare pepe art by jake rockland">
+    <title>stippled pepes — jake rockland</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            margin: 0;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 1rem;
+            right: 1.5rem;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            font-family: inherit;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            transition: opacity 0.15s;
+        }
+
+        .gallery-item:hover img {
+            opacity: 0.85;
+        }
+    </style>
 </head>
 <body>
     <main>
         <a href="/" class="nav-link">← back home</a>
 
-        <h1>pepe prints</h1>
+        <h1>stippled pepes</h1>
 
-        <p>the following curated sets of pepe composites are available as unsigned open editions.</p>
+        <p>between 2022-2023, i created a series of hand-stippled interpretations of cards from the <a href="https://rarapepes.com/" target="_blank">rare pepe</a> project — the original crypto art movement that launched on bitcoin's counterparty protocol in 2016.</p>
 
-        <hr>
+        <p>each piece was drawn by hand using thousands of individual ink dots (stippling), then issued as rare pepe cards on counterparty under the artist name <a href="https://robotlovecoffee.wtf/Artist/stipple/Cards" target="_blank">STIPPLE</a>.</p>
 
-        <h2>available pepe composites</h2>
-
-        <p>for each composite below, click on the image to be taken to a page where you can see the available sizes and pricing.</p>
-
-        <p>you can also browse these composite sets <a href="https://stipple.level.press/" target="_blank">here</a></p>
+        <p>below are curated composite layouts of the full series. click any image to view it larger.</p>
 
         <hr>
 
-        <a href="https://stipple.level.press/s/stippled-golden-trio" target="_blank">
-            <img src="img/STIPPLED GOLDEN TRIO.png" alt="Triptych of stippled pepe cards.">
-        </a>
+        <h2>the composites</h2>
+
+        <h3>stippled golden trio</h3>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="img/STIPPLED GOLDEN TRIO.png" alt="Triptych of three stippled rare pepe cards in gold tones.">
+        </div>
 
         <hr>
 
-        <a href="https://stipple.level.press/s/stippled-purple-trio" target="_blank">
-            <img src="img/STIPPLED PRESERVES TRIO.png" alt="Triptych of stippled pepe cards.">
-        </a>
+        <h3>stippled preserves trio</h3>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="img/STIPPLED PRESERVES TRIO.png" alt="Triptych of three stippled rare pepe cards in purple tones.">
+        </div>
 
         <hr>
 
-        <a href="https://stipple.level.press/s/stippled-pepe-eyes" target="_blank">
-            <img src="img/STIPPLED PEPE EYES.png" alt="Diptych of stippled pepe cards.">
-        </a>
+        <h3>stippled pepe eyes</h3>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="img/STIPPLED PEPE EYES.png" alt="Diptych of two stippled rare pepe eye close-ups.">
+        </div>
 
         <hr>
 
-        <a href="https://stipple.level.press/s/stippled-homerpepe" target="_blank">
-            <img src="img/STIPPLED HOMERPEPE.png" alt="Diptych of stippled pepe cards.">
-        </a>
+        <h3>stippled homerpepe</h3>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="img/STIPPLED HOMERPEPE.png" alt="Diptych of stippled homerpepe cards.">
+        </div>
 
         <hr>
 
-        <a href="https://stipple.level.press/s/stippled-nakamoto" target="_blank">
-            <img src="img/STIPPLED NAKAMOTO.png" alt="Diptych of stippled pepe cards.">
-        </a>
+        <h3>stippled nakamoto</h3>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="img/STIPPLED NAKAMOTO.png" alt="Diptych of stippled nakamoto pepe cards.">
+        </div>
 
         <hr>
 
-        <a href="https://stipple.level.press/s/stippled-pepe-szn" target="_blank">
-            <img src='img/STIPPLED PEPE SZN.png' alt='Full set of "STPL PEPE SZN" pepe cards.'>
-        </a>
+        <h3>stippled pepe szn</h3>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src='img/STIPPLED PEPE SZN.png' alt='Full set of stippled pepe season cards.'>
+        </div>
+
+        <hr>
+
+        <h2>prints</h2>
+
+        <p>these composites are available as unsigned open edition prints in various sizes. you can browse and order them through <a href="https://stipple.level.press/" target="_blank">the print shop</a>.</p>
     </main>
+
+    <div class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">✕</span>
+        <img src="" alt="">
+    </div>
+
+    <script>
+        var lightbox = document.querySelector('.lightbox');
+        var lightboxImg = lightbox.querySelector('img');
+
+        function openLightbox(el) {
+            var img = el.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>
