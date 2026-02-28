@@ -24,7 +24,8 @@ main.centered {
 }
 
 main.centered .ascii-art,
-main.centered ul {
+main.centered ul,
+main.centered .bio {
     display: inline-block;
     text-align: left;
 }
