@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="generative on-chain art — art blocks projects by jake rockland">
+    <title>art blocks — jake rockland</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            margin: 0;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 1rem;
+            right: 1.5rem;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            font-family: inherit;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            transition: opacity 0.15s;
+        }
+
+        .gallery-item:hover img {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="/" class="nav-link">← back home</a>
+
+        <h1>art blocks</h1>
+
+        <p>in 2021, i released four generative art projects through <a href="https://www.artblocks.io/" target="_blank">art blocks</a>. my practice draws on printmaking techniques and quilt-making traditions, composing scenes with digital silkscreens made of stippled dots.</p>
+
+        <p>click any image to view it larger.</p>
+
+        <hr>
+
+        <h3>stipple sunsets</h3>
+
+        <p>my first generative art project — beach scenes inspired by a longing to be back with feet in the sand. each piece consists of layered "screens" for the ocean, skyline, and sun, rendered in stippled dots across seven color palettes. 360 editions.</p>
+
+        <div class="image-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/stipple-sunsets-0.png" alt="Stipple Sunsets #0">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/stipple-sunsets-125.png" alt="Stipple Sunsets #125">
+            </div>
+        </div>
+
+        <p><a href="https://www.artblocks.io/collections/factory/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/51" target="_blank">view on art blocks →</a></p>
+
+        <hr>
+
+        <h3>patchwork saguaros</h3>
+
+        <p>quilted desert landscapes in homage to the sonoran desert, where i spent most of my adolescence. the quilting approach was inspired by the quilt work of my grandmother. 72 editions, with proceeds funding the nancy rockland-miller scholarship at kent state university.</p>
+
+        <div class="image-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/patchwork-saguaros-0.png" alt="Patchwork Saguaros #0">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/patchwork-saguaros-25.png" alt="Patchwork Saguaros #25">
+            </div>
+        </div>
+
+        <p><a href="https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/66" target="_blank">view on art blocks →</a></p>
+
+        <hr>
+
+        <h3>speckled summits</h3>
+
+        <p>dreamy mountain landscapes inspired by the rockies. began as a formal study in layered shapes, but took on a life of its own through experimentation with animation — visualizing in form, color, and motion the tension between conformity and self-expression. 72 editions.</p>
+
+        <div class="image-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/speckled-summits-0.png" alt="Speckled Summits #0">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/speckled-summits-21.png" alt="Speckled Summits #21">
+            </div>
+        </div>
+
+        <p><a href="https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/109" target="_blank">view on art blocks →</a></p>
+
+        <hr>
+
+        <h3>dot matrix gradient study</h3>
+
+        <p>an exploration of creating abstract forms with stippling rather than depicting figurative ones. each piece is composed purely with dots, splitting the canvas into patches with their own stipple sizing, density, and layering — then distorting the process to blur the lines of recognizable stippling. 540 editions.</p>
+
+        <div class="image-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/dot-matrix-0.png" alt="Dot Matrix Gradient Study #0">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="img/artblocks/dot-matrix-122.png" alt="Dot Matrix Gradient Study #122">
+            </div>
+        </div>
+
+        <p><a href="https://www.artblocks.io/collections/factory/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/149" target="_blank">view on art blocks →</a></p>
+
+        <hr>
+
+        <p>you can browse all of my work on <a href="https://www.artblocks.io/artists/0xffbc92e11575fe4da9093f53957956d991c78268" target="_blank">art blocks</a> or <a href="https://deca.art/StippleStudio" target="_blank">deca</a>.</p>
+    </main>
+
+    <div class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">✕</span>
+        <img src="" alt="">
+    </div>
+
+    <script src="js/graffiti.js"></script>
+    <script>
+        var lightbox = document.querySelector('.lightbox');
+        var lightboxImg = lightbox.querySelector('img');
+
+        function openLightbox(el) {
+            var img = el.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>
