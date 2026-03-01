@@ -36,6 +36,7 @@ main.centered .bio {
 
 .ascii-art {
     font-size: 0.7rem;
+    font-weight: bold;
     line-height: 1.15;
     overflow-x: auto;
     white-space: pre;
