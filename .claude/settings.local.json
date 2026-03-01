@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:jakerockland.com)",
+      "Bash(curl:*)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(figlet:*)",
+      "WebFetch(domain:www.artblocks.io)",
+      "WebFetch(domain:deca.art)",
+      "WebFetch(domain:purphat.medium.com)",
+      "WebSearch",
+      "WebFetch(domain:artynft.io)",
+      "WebFetch(domain:artblocks.wiki)",
+      "WebFetch(domain:verse.works)",
+      "WebFetch(domain:api.artblocks.io)",
+      "WebFetch(domain:opensea.io)",
+      "WebFetch(domain:media.artblocks.io)",
+      "WebFetch(domain:www.saveartspace.org)",
+      "Bash(gh api:*)",
+      "Bash(gh auth:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:token.artblocks.io)",
+      "Bash(head:*)",
+      "WebFetch(domain:docs.artblocks.io)"
+    ]
+  }
+}
