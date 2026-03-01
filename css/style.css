@@ -177,18 +177,16 @@ img {
     pointer-events: none;
     user-select: none;
     z-index: -1;
-    display: none;
+    display: block;
 }
 
 .graffiti .g {
     position: absolute;
-    color: #e0e0e0;
+    color: #efefef;
     font-size: 0.85rem;
     white-space: nowrap;
 }
 
-@media (min-width: 1100px) {
-    .graffiti {
-        display: block;
-    }
+.graffiti .g-inner {
+    color: #f5f5f5;
 }
