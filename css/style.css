@@ -182,11 +182,11 @@ img {
 
 .graffiti .g {
     position: absolute;
-    color: #efefef;
+    color: #e8e8e8;
     font-size: 0.85rem;
     white-space: nowrap;
 }
 
 .graffiti .g-inner {
-    color: #f5f5f5;
+    color: #ededed;
 }
